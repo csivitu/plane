@@ -13,6 +13,7 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 INSTALLED_APPS += ("scout_apm.django",)  # noqa
 
 
+EMAIL_BACKEND = 'django_ses.SESBackend'
 # Scout Settings
 SCOUT_MONITOR = os.environ.get("SCOUT_MONITOR", False)
 SCOUT_KEY = os.environ.get("SCOUT_KEY", "")
